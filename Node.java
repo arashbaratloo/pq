@@ -11,8 +11,8 @@ public class Node<T> {
 
 	public Node(T data){
     this.data = data;
-    this.next = null;
-    this.previous = null;
+		this.next = null;
+		this.previous = null;
 		this.vip_level = 0;
 	}
 	public Node(T data, int vip_level) {
