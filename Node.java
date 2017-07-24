@@ -7,11 +7,17 @@ public class Node<T> {
 	// list for each dequeue.
 	private Node<T> next;
   private Node<T> previous;
+	private int vip_level;  // Rank or "vip level" of the node. Defaults to 0.
 
 	public Node(T data){
     this.data = data;
     this.next = null;
     this.previous = null;
+		this.vip_level = 0;
+	}
+	public Node(T data, int vip_level) {
+		this(data);
+		this.vip_level = vip_level;
 	}
 	public void setNext(Node<T> n){
 		this.next = n;
@@ -27,5 +33,11 @@ public class Node<T> {
   }
 	public T getData(){
 		return this.data;
+	}
+	public int getVIPLevel() {
+		return this.vip_level;
+	}
+	public void setVIPLevel(int level) {
+		this.vip_level = level;
 	}
 } // end class Node<T>
